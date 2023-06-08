@@ -1,4 +1,4 @@
-package starter.wikipedia;
+package starter.opencart;
 
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;

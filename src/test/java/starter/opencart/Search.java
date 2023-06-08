@@ -1,4 +1,4 @@
-package starter.wikipedia;
+package starter.opencart;
 
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
