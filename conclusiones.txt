@@ -1,0 +1,5 @@
+Conclusiones:
+
+1.- A partir de la ejecucion de los test se puede concluir la efectiva operancia de la pagina cumpliendo como un
+excelente lugar para practicar el empleo de Test de Integracion, E2E, etc. A parte de ser una excelente opcion tambien
+para poder implementar scraping en el caso de que se necesita realizar alguna prueba de eso.

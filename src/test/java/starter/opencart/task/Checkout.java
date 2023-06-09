@@ -21,6 +21,8 @@ public class Checkout {
                                         .located(By.xpath("//a[@title = 'Checkout']"));
     static Target GUEST_RADIO_BUTTON = Target.the("Guest Radio Button")
                                     .located(By.xpath("//input[@value = 'guest']"));
+    static Target BUTTON_GUEST = Target.the("Continue Button from Billing Details Step")
+            .located(By.xpath("//input[@id = 'button-guest']"));
     static Target H1_TITLE = Target.the("Success Order Title")
             .located(By.xpath("//div[@id = 'content']/h1"));
     @Step
@@ -54,7 +56,8 @@ public class Checkout {
                 Enter.theValue(billInfo.get("postCode")).into(InputField.withNameOrId("input-payment-postcode")),
                 SelectFromOptions.byVisibleText(billInfo.get("country")).from("#input-payment-country"),
                 SelectFromOptions.byVisibleText(billInfo.get("state")).from("#input-payment-zone"),
-                Click.on(By.xpath("//input[@id = 'button-guest']"))
+                Scroll.to(BUTTON_GUEST).andAlignToTop(),
+                Click.on(BUTTON_GUEST)
         );
     }
 
