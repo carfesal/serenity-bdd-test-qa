@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.questions.Text;
 import org.openqa.selenium.By;
 
 public class CheckoutComponents {
-    public static Question<String> cartText() {
-        return Text.of(By.id("cart-total"));
+    public static Question<String> successText() {
+        return Text.of(By.xpath("//div[@id = 'content']/h1"));
     }
 }

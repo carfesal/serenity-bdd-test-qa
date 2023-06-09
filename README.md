@@ -1,32 +1,21 @@
-# Serenity JUnit Screenplay Starter project
+# serenity-bdd-test-qa
+--------------------------------------------------------------
+--------------------------------------------------------------
+**Github:** [serenity-bdd-test-qa](https://github.com/carfesal/serenity-bdd-test-qa)
 
-Get started quickly with Serenity BDD and JUnit 5 with this simple starter project. 
+1. **Prerequisitos:**
+    - Maquina local con el sistema operativo Windows 11
+    - IDE IntelliJ version 2023.1
+    - Maven version 3.9.2 (debe estar en la variable de entorno)
+    - JDK versión 11 (debe estar en la variable de entorno)
 
-## Get the code
+2. Comandos de instalación
+    - mvn install (descarga todas las dependencias del POM)
 
-Git:
+3. Instrucciones para ejecutar los test
+    - mvn clean verify
+    - Se generan reportes acerca de los test: se puede acceder a ellos a traves de la ruta **target\site\serenity**
+4. Información adicional
+   No se entrega informacion adicional al proyecto
 
-    git clone https://github.com/serenity-bdd/serenity-junit-screenplay-starter
-    cd serenity-junit-screenplay-starter
-
-
-Or simply [download a zip](https://github.com/serenity-bdd/serenity-junit-screenplay-starter/archive/master.zip) file.
-
-## Use Maven
-
-Open a command window and run:
-
-    mvn clean verify
-
-## Use Gradle
-
-Open a command window and run:
-
-    gradlew test 
-
-## Viewing the reports
-
-Both of the commands provided above will produce a Serenity test report in the `target/site/serenity` directory. Go take a look!
-
-## Tailoring the project to your needs
-
+Referencia: https://docs.github.com/es/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes

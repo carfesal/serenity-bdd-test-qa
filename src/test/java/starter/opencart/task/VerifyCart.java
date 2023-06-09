@@ -15,8 +15,7 @@ public class VerifyCart {
         return Task.where(
                 "Verify Cart",
                 Click.on(By.xpath("//a[@title = 'Shopping Cart']")),
-                Ensure.that(ShoppingCartComponents.titleContent()).containsIgnoringCase("Use Gift Certificate"),
-                Click.on()
+                Ensure.that(ShoppingCartComponents.titleContent()).containsIgnoringCase("Use Gift Certificate")
         );
     }
 }

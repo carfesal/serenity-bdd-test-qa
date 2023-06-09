@@ -29,25 +29,17 @@ class WhenTestingOpenCart {
     @CastMember(name = "Wendy")
     Actor wendy;
 
-    Map<String, String> billInfo;
+
     @Before
     public void setupActor() {
         wendy.can(BrowseTheWeb.with(driver));
-        billInfo = new HashMap<>();
-        billInfo.put("firstName", "Carlos");
-        billInfo.put("lastName", "Carlos");
-        billInfo.put("email", "Carlos");
-        billInfo.put("telephone", "Carlos");
-        billInfo.put("address", "Carlos");
-        billInfo.put("city", "Carlos");
-        billInfo.put("postCode", "Carlos");
-        billInfo.put("country", "Carlos");
-        billInfo.put("state", "Carlos");
+
     }
 
     @Test
     @DisplayName("Put items into the cart")
     void testVerifyOpenCartPageProcess() {
+
         wendy.attemptsTo(
                 Open.browserOn().the(OpenCartPage.class),
 
@@ -60,7 +52,27 @@ class WhenTestingOpenCart {
                 VerifyCart.verifyCart(),
 
                 //Checkout Section
-                Checkout.openCheckoutPage()
+                Checkout.openCheckoutPage(),
+                Checkout.fillCheckoutOptions(),
+                Checkout.fillBillingDetails(createBillInfoData()),
+                Checkout.fillPaymentMethod(),
+                Checkout.confirmOrder(),
+                Checkout.checkSuccesfulOrder()
         );
     }
+
+    public Map<String, String> createBillInfoData() {
+        Map<String, String> billInfo;
+        billInfo = new HashMap<>();
+        billInfo.put("firstName", "Carlos");
+        billInfo.put("lastName", "Salazar");
+        billInfo.put("email", "chardan25@hotmail.com");
+        billInfo.put("telephone", "0987654321");
+        billInfo.put("address", "Duran");
+        billInfo.put("city", "Duran");
+        billInfo.put("postCode", "090210");
+        billInfo.put("country", "Ecuador");
+        billInfo.put("state", "Guayas");
+        return billInfo;
+    };
 }
